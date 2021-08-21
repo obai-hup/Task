@@ -1,0 +1,50 @@
+﻿@model IEnumerable<BethanysPieShop.Models.OrderDetail>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>All Orders</h2>
+<a id="btnprint" class="btn btn-primary" href="../OrderDetail/Print" target="_blank">Print </a>
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+         
+            <th>
+                @Html.DisplayNameFor(model => model.OrderId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pie.PieId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PieId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+          
+        </tr>
+}
+    </tbody>
+</table>

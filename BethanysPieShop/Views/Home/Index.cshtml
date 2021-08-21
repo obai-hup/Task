@@ -1,0 +1,10 @@
+﻿@model PiesListViewModel
+
+
+
+
+
+@foreach (var pie in Model.Pies)
+{
+    <partial name="_PieCard" model="pie" />
+}
